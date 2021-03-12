@@ -1,0 +1,49 @@
+﻿using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ProjectLibrary.Tests
+{
+    class BranchingTests
+    {
+        [TestCase(2, 1, 3)]
+        [TestCase(1, 2, -1)]
+        [TestCase(2, 2, 4)]
+        public void CalculationAAndB_WhenABPassed_ShouldSumMultiplication(int a, int b, int expected)
+        {
+            int actual = Branching.CalculationAAndB(a, b);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(2, 1, 1)]
+        [TestCase(-1, 2, 2)]
+        [TestCase(-2, -2, 3)]
+        [TestCase(2, -2, 4)]
+        public void GetQuarter_WhenABPassed_GetQuarter(int a, int b, int expected)
+        {
+            int actual = Branching.GetQuarter(a, b);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(10, 5, 3, 3, 5, 10)]
+        [TestCase(-1, 6, 2, -1, 2, 6)]
+        [TestCase(-2, 8, 7, -2, 7, 8)]
+        public void SortIncrease_WhenABCPassed_ShouldSortIncrease(int a, int b, int c, int expectedA, int expectedB, int expectedC)
+        {
+            Branching.SortIncrease(ref a, ref b, ref c);
+
+            int actualA = a;
+            int actualB = b;
+            int actualC = c;
+
+            Assert.AreEqual(expectedA, actualA);
+            Assert.AreEqual(expectedB, actualB);
+            Assert.AreEqual(expectedC, actualC);
+        }
+
+
+    }
+}

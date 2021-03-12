@@ -1,0 +1,9 @@
+C:\Users\Serhii\source\repos\ProjectLibrary\bin\Release\netcoreapp3.1\ProjectLibrary.deps.json
+C:\Users\Serhii\source\repos\ProjectLibrary\bin\Release\netcoreapp3.1\ProjectLibrary.dll
+C:\Users\Serhii\source\repos\ProjectLibrary\bin\Release\netcoreapp3.1\ProjectLibrary.pdb
+C:\Users\Serhii\source\repos\ProjectLibrary\obj\Release\netcoreapp3.1\ProjectLibrary.AssemblyInfoInputs.cache
+C:\Users\Serhii\source\repos\ProjectLibrary\obj\Release\netcoreapp3.1\ProjectLibrary.AssemblyInfo.cs
+C:\Users\Serhii\source\repos\ProjectLibrary\obj\Release\netcoreapp3.1\ProjectLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Serhii\source\repos\ProjectLibrary\obj\Release\netcoreapp3.1\ProjectLibrary.dll
+C:\Users\Serhii\source\repos\ProjectLibrary\obj\Release\netcoreapp3.1\ProjectLibrary.pdb
+C:\Users\Serhii\source\repos\ProjectLibrary\obj\Release\netcoreapp3.1\ProjectLibrary.csprojAssemblyReference.cache
