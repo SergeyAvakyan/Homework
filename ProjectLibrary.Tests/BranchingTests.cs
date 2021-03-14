@@ -44,6 +44,26 @@ namespace ProjectLibrary.Tests
             Assert.AreEqual(expectedC, actualC);
         }
 
+        [TestCase(6, 18, 7, new double[] { -0.459, -2.54 })]
+        [TestCase(5, 30, 20, new double[] { -0.763, -5.236 })]
+        [TestCase(5, 10, 5, new double[] { -1 })]
+        public void GetRootsSquareEquation_WhenABCPassed_ShouldRootsSquareEquation(double a, double b, double c, double[] expected)
+        {
+            double[] actual = Branching.GetRootsSquareEquation(a, b, c);
+
+            Assert.That(actual, Is.EqualTo(expected).Within(3));
+        }
+
+        [TestCase(10, "ten")]
+        [TestCase(15, "fifteen")]
+        [TestCase(25, "twenty five")]
+        public void GetUppercaseNumbers_WhenAPassed_ShouldNumberInWords(int number, string expected)
+        {
+            string actual = Branching.GetUppercaseNumbers(number);
+
+            Assert.AreEqual(expected, actual);
+        }
+
 
     }
 }

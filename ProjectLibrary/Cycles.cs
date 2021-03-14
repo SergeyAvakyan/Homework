@@ -182,7 +182,7 @@ namespace ProjectLibrary
        
         public static int[] GetNumbersSumOfEvenMore(int a)
         {
-            int sumEven = 0;
+            int sumEven=0;
             int sumNotEven = 0;
             int result;
             int count = 0;
@@ -205,7 +205,7 @@ namespace ProjectLibrary
                 }
                 if (sumEven > sumNotEven)
                 {
-                  ++count;
+                 count++;
                 }
 
                 sumEven = 0;
@@ -232,7 +232,7 @@ namespace ProjectLibrary
                 }
                 if (sumEven > sumNotEven)
                 {
-                    array[++j]=i;
+                    array[j++]=i;
                 }
 
                 sumEven = 0;
