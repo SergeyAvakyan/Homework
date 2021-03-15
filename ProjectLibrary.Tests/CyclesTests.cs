@@ -21,12 +21,17 @@ namespace ProjectLibrary.Tests
         [TestCase(100, new int[] { 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000 })]
         [TestCase(200, new int[] { 200, 400, 600, 800, 1000 })]
         [TestCase(500, new int[] { 500, 1000 })]
-
         public void GetDividedByA_WhenABPassed_ShouldDividedByA(int a, int[] expected)
         {
             int[] actual = Сycles.GetDividedByA(a);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0)]
+        public void GetDividedByA_WhenABPassed_ShouldDivideByZeroException(int a)
+        {
+            Assert.Throws<DivideByZeroException>(() =>Сycles.GetDividedByA(a));
         }
 
         [TestCase(2, 1)]
@@ -59,7 +64,6 @@ namespace ProjectLibrary.Tests
             int actual = Сycles.GetSumAllDividedBy7(a, b);
 
             Assert.AreEqual(expected, actual);
-
         }
 
         [TestCase(3, 2)]
@@ -72,7 +76,6 @@ namespace ProjectLibrary.Tests
             int actual = Сycles.GetFibonacciNumber(n);
 
             Assert.AreEqual(expected, actual);
-
         }
 
         [TestCase(20, 10, 10)]
@@ -85,7 +88,6 @@ namespace ProjectLibrary.Tests
             int actual = Сycles.GetGreatestDivisorEuclideanMethod(a, b);
 
             Assert.AreEqual(expected, actual);
-
         }
 
         [TestCase(8, 2)]
@@ -97,8 +99,8 @@ namespace ProjectLibrary.Tests
             int actual = Сycles.GetNBinarySearch(a);
 
             Assert.AreEqual(expected, actual);
-
         }
+
         [TestCase(125, 2)]
         [TestCase(422, 0)]
         [TestCase(379, 3)]
@@ -108,7 +110,6 @@ namespace ProjectLibrary.Tests
             int actual = Сycles.GetNumberOfOddDigits(a);
 
             Assert.AreEqual(expected, actual);
-
         }
 
         [TestCase(125, 521)]
@@ -120,18 +121,16 @@ namespace ProjectLibrary.Tests
             int actual = Сycles.GetMirrorNumberA(a);
 
             Assert.AreEqual(expected, actual);
-
         }
+
         [TestCase(10, new int[] { 2, 4, 6, 8 })]
         [TestCase(12, new int[] { 2, 4, 6, 8 })]
         [TestCase(20, new int[] { 2, 4, 6, 8, 12, 14, 16, 18 })]
-
         public void GetNumbersSumOfEvenMore_WhenAPassed_ShouldNumbersSumOfEvenMore(int a, int[] expected)
         {
             int[] actual = Сycles.GetNumbersSumOfEvenMore(a);
 
             Assert.AreEqual(expected, actual);
-
         }
 
         [TestCase("125", "521", true)]
@@ -143,7 +142,6 @@ namespace ProjectLibrary.Tests
             bool actual = Сycles.GetIdenticalDigitsNumbers(a, b);
 
             Assert.AreEqual(expected, actual);
-
         }
     }
 }

@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 
 namespace ProjectLibrary.Tests
 {
@@ -28,11 +29,24 @@ namespace ProjectLibrary.Tests
 
             Assert.AreEqual(expected, actual);
         }
+        
+        [TestCase(5, 5)]
+        public void GetEquation_WhenABPassed_ShouldDivideByZeroException(int a, int b)
+        {
+            try
+            {
+                Variables.GetEquation(a, b);
+            }
+            catch (DivideByZeroException)
+            {
+                Assert.Pass();
+            }
+        }
 
         [TestCase(10, 5, 2, 0)]
         [TestCase(20, 10, 2, 0)]
         [TestCase(8, 4, 2, 0)]
-        public void GetDivisionAndRemainder_WhenABPassed_DivisionAndRemainderCD(int a, int b, int expectedC, int expectedD)
+        public void GetDivisionAndRemainder_WhenABPassed_ShouldDivisionAndRemainderCD(int a, int b, int expectedC, int expectedD)
         {
             (int actualC, int actualD) = Variables.GetDivisionAndRemainder(a, b);
 
@@ -43,27 +57,34 @@ namespace ProjectLibrary.Tests
         [TestCase(2,4,6,1)]
         [TestCase(4, 6, 2, -1)]
         [TestCase(3, 4, 5, 0.33)]
-        
-        public void GetSquareEquation_WhenABCPassed_SquareEquation(int a, int b, int c, double expected)
+        public void GetSquareEquation_WhenABCPassed_ShouldSquareEquation(int a, int b, int c, double expected)
         {
             double actual = Variables.GetSquareEquation(a, b, c);
 
             Assert.AreEqual(expected,actual);
         }
 
+        [TestCase(0, 4, 6)]
+        public void GetSquareEquation_WhenABCPassed_ShouldDivideByZeroException(int a, int b, int c)
+        {
+            Assert.Throws<DivideByZeroException>(() => Variables.GetSquareEquation(a, b, c));
+        }
+
         [TestCase(2, 1, 4, 3, 1, -1)]
         [TestCase(3, 1, 2, 4, -3, 10)]
         [TestCase(15, 10, 10, 5, 1, -5)]
-        public void GetStraightEquation_WhenX1Y1X2Y2Passed_StraightEquationKB(int x1, int y1, int x2, int y2, double expectedK, double expectedB)
+        public void GetStraightEquation_WhenX1Y1X2Y2Passed_ShouldStraightEquationKB(int x1, int y1, int x2, int y2, double expectedK, double expectedB)
         {
             (double actualK, double actualB) = Variables.GetStraightEquation(x1, y1, x2, y2);
 
             Assert.AreEqual(expectedK, actualK);
             Assert.AreEqual(expectedB, actualB);
-
         }
-        
 
-
+        [TestCase(2, 1, 2, 3)]
+        public void GetStraightEquation_WhenX1Y1X2Y2Passed_ShouldDivideByZeroException(int x1, int y1, int x2, int y2)
+        {
+            Assert.Throws<DivideByZeroException>(() => Variables.GetStraightEquation(x1, y1, x2, y2));
+        }
     }
 }

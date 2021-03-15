@@ -54,6 +54,12 @@ namespace ProjectLibrary.Tests
             Assert.That(actual, Is.EqualTo(expected).Within(3));
         }
 
+        [TestCase(0, 18, 7)]
+        public void GetRootsSquareEquation_WhenABCPassed_ShouldDivideByZeroException(double a, double b, double c)
+        {
+            Assert.Throws<DivideByZeroException>(() => Branching.GetRootsSquareEquation(a, b, c));
+        }
+
         [TestCase(10, "ten")]
         [TestCase(15, "fifteen")]
         [TestCase(25, "twenty five")]
@@ -63,7 +69,5 @@ namespace ProjectLibrary.Tests
 
             Assert.AreEqual(expected, actual);
         }
-
-
     }
 }
