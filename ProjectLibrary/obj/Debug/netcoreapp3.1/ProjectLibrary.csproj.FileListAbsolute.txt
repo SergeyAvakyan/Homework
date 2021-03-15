@@ -11,3 +11,12 @@ C:\Users\Serhii\source\repos\ProjectLibrary\bin\Debug\netcoreapp3.1\ProjectLibra
 C:\Users\Serhii\source\repos\ProjectLibrary\obj\Debug\netcoreapp3.1\ProjectLibrary.dll
 C:\Users\Serhii\source\repos\ProjectLibrary\obj\Debug\netcoreapp3.1\ProjectLibrary.pdb
 C:\Users\Serhii\source\repos\ProjectLibrary\obj\Debug\netcoreapp3.1\ProjectLibrary.genruntimeconfig.cache
+C:\Users\Serhii\source\repos\Homework\ProjectLibrary\obj\Debug\netcoreapp3.1\ProjectLibrary.csprojAssemblyReference.cache
+C:\Users\Serhii\source\repos\Homework\ProjectLibrary\obj\Debug\netcoreapp3.1\ProjectLibrary.AssemblyInfoInputs.cache
+C:\Users\Serhii\source\repos\Homework\ProjectLibrary\obj\Debug\netcoreapp3.1\ProjectLibrary.AssemblyInfo.cs
+C:\Users\Serhii\source\repos\Homework\ProjectLibrary\obj\Debug\netcoreapp3.1\ProjectLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Serhii\source\repos\Homework\ProjectLibrary\obj\Debug\netcoreapp3.1\ProjectLibrary.dll
+C:\Users\Serhii\source\repos\Homework\ProjectLibrary\obj\Debug\netcoreapp3.1\ProjectLibrary.pdb
+C:\Users\Serhii\source\repos\Homework\ProjectLibrary\bin\Debug\netcoreapp3.1\ProjectLibrary.deps.json
+C:\Users\Serhii\source\repos\Homework\ProjectLibrary\bin\Debug\netcoreapp3.1\ProjectLibrary.dll
+C:\Users\Serhii\source\repos\Homework\ProjectLibrary\bin\Debug\netcoreapp3.1\ProjectLibrary.pdb

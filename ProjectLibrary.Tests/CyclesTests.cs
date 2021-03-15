@@ -122,8 +122,10 @@ namespace ProjectLibrary.Tests
             Assert.AreEqual(expected, actual);
 
         }
-        [TestCase(6, new int[] { 2, 4 })]
-        [TestCase(21, new int[] { 2, 4, 6, 8, 12, 14, 16, 18, 20 })]
+        [TestCase(10, new int[] { 2, 4, 6, 8 })]
+        [TestCase(12, new int[] { 2, 4, 6, 8 })]
+        [TestCase(20, new int[] { 2, 4, 6, 8, 12, 14, 16, 18 })]
+
         public void GetNumbersSumOfEvenMore_WhenAPassed_ShouldNumbersSumOfEvenMore(int a, int[] expected)
         {
             int[] actual = Сycles.GetNumbersSumOfEvenMore(a);
