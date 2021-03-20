@@ -14,7 +14,6 @@ namespace ProjectLibrary.Tests
         public void GetMinElementTwoDimensionalArray_WhenDoubleArrayPassed_ShouldMinElementDoubleArray(int mockNumber, int expected)
         {
             int[,] array = DoubleArrayMock.GetMock(mockNumber);
-
             int actual = TwoDimensionalArrays.GetMinElementTwoDimensionalArray(array);
 
             Assert.AreEqual(expected, actual);
@@ -23,11 +22,9 @@ namespace ProjectLibrary.Tests
         [TestCase(1, 9)]
         [TestCase(2, 7)]
         [TestCase(3, 9)]
-
         public void GetMaxElementTwoDimensionalArray_WhenDoubleArrayPassed_ShouldMaxElementDoubleArray(int mockNumber, int expected)
         {
             int[,] array = DoubleArrayMock.GetMock(mockNumber);
-
             int actual = TwoDimensionalArrays.GetMaxElementTwoDimensionalArray(array);
 
             Assert.AreEqual(expected, actual);
@@ -36,11 +33,9 @@ namespace ProjectLibrary.Tests
         [TestCase(1, new int[] { 2, 0 })]
         [TestCase(2, new int[] { 2, 0 })]
         [TestCase(3, new int[] { 2, 2 })]
-
         public void GetMinIndexElementTwoDimensionalArray_WhenDoubleArrayPassed_ShouldMinIndexDoubleArray(int mockNumber, int[] expected)
         {
             int[,] array = DoubleArrayMock.GetMock(mockNumber);
-
             int[] actual = TwoDimensionalArrays.GetMinIndexElementTwoDimensionalArray(array);
 
             Assert.AreEqual(expected, actual);
@@ -49,11 +44,9 @@ namespace ProjectLibrary.Tests
     [TestCase(1, new int[] { 2, 2 })]
     [TestCase(2, new int[] { 1, 0 })]
     [TestCase(3, new int[] { 1, 1 })]
-
     public void GetMaxIndexElementTwoDimensionalArray_WhenDoubleArrayPassed_ShouldMaxIndexDoubleArray(int mockNumber, int[] expected)
     {
         int[,] array = DoubleArrayMock.GetMock(mockNumber);
-
         int[] actual = TwoDimensionalArrays.GetMaxIndexElementTwoDimensionalArray(array);
 
         Assert.AreEqual(expected, actual);
@@ -62,11 +55,9 @@ namespace ProjectLibrary.Tests
         [TestCase(1, 2)]
         [TestCase(2, 4)]
         [TestCase(3, 2)]
-
         public void GetNumberArrayElementsLargerAllNeighbors__WhenDoubleArrayPassed_ShouldNumberArrayElementsLargerAllNeighbors(int mockNumber, int expected)
         {
             int[,] array = DoubleArrayMock.GetMock(mockNumber);
-
             int actual = TwoDimensionalArrays.GetNumberArrayElementsLargerAllNeighbors(array);
 
             Assert.AreEqual(expected, actual);
@@ -75,19 +66,16 @@ namespace ProjectLibrary.Tests
         [TestCase(1, 1)]
         [TestCase(2, 2)]
         [TestCase(3, 3)]
-
         public void GetDisplayArrayMainDiagonalWhenDoubleArrayPassed_ShouldDisplayArrayMainDiagonal(int mockNumber, int mockExpected)
         {
             int[,] array = DoubleArrayMock.GetMock(mockNumber);
             int[,] expected = DoubleArrayMock.GetMockResult(mockExpected);
-
             int[,] actual = TwoDimensionalArrays.GetDisplayArrayMainDiagonal(array);
 
             Assert.AreEqual(expected, actual);
         }
     }
-
-public static class DoubleArrayMock
+   public static class DoubleArrayMock
     {
         public static int[,] GetMock(int number)
         {

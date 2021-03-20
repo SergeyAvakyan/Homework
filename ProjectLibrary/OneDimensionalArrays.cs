@@ -28,7 +28,6 @@ namespace ProjectLibrary
                 {
                     max = array[i];
                 }
-
             }
             return max;
         }
@@ -72,7 +71,6 @@ namespace ProjectLibrary
                 {
                     sumNotEven += array[i];
                 }
-
             }
             return sumNotEven;
         }
@@ -115,7 +113,6 @@ public static int[] GetSwapHalfArray(int[] array)
                 int temp = array[count1];
                 array[count1] = array[count2];
                 array[count2] = temp;
-
                 count1++;
                 count2++;
             }
@@ -151,7 +148,6 @@ public static int[] GetSwapHalfArray(int[] array)
                 array[min] = array[i];
                 array[i] = temp;
             }
-
             return array;
         }
 
